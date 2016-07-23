@@ -1,0 +1,16 @@
+{% extends './layout/layout.html' %}
+
+{% block content %}
+{% include "./includes/banner.html" with page only %}
+<div class="article">
+{% set states = [{n: 'ca', t: 'California | 加州'}, {n: 'ny', t: 'New York | 纽约州', cover: 'category-2'}, {n: 'fl', t: 'Florida | 佛罗里达州'}, {n: 'pa', t: 'Pennsylvania | 宾夕法尼亚州'}, {n: 'il', t: 'Illinois | 伊利诺伊州'}, {n: 'ma', t: 'Massachusetts | 马萨诸塞州'}, {n: 'nj', t: 'New Jersey | 新泽西州'}, {n: 'wa', t: 'Washington | 华盛顿州'}] %}
+{% for state in states %}
+  <div class="categories">
+    <a class="category" href="#{{state.n}}">
+      <h4 class="category-title">{{state.t}}</h4>
+      <div class="category-cover" style="background-image: url(https://res.cloudinary.com/moveha/image/upload/v1434270083/assets/states/1.0/{{state.n}}.jpg)"></div>
+    </a>
+  </div>
+{% endfor %}
+</div>
+{% endblock %}

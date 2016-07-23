@@ -1,0 +1,8 @@
+{
+  "db": "mongodb://localhost/cr-pro",
+  "port": 8000,
+  "app": {
+    "name": "CR 一站式留学租房平台"
+  },
+  "online": true
+}

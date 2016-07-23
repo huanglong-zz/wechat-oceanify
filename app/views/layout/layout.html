@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% block title %}CR{% endblock %}</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="format-detection" content="email=no"/>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <meta name="renderer" content="webkit">
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <div class="section">
+    {% block content %}{% endblock %}
+    {% include "../includes/nav.html" with page only %}
+  </div>
+
+  {% include "../includes/foot.html" %}
+</body>
+</html>
