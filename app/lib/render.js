@@ -1,16 +1,16 @@
 'use strict'
 
-var views = require('co-views')
-var path = require('path')
-var moment = require('moment')
-var _package = require('../../package.json')
-var config = require('../../config/config')
-var dir = path.join(__dirname, '../', 'views')
+const views = require('co-views')
+const path = require('path')
+const moment = require('moment')
+const _package = require('../../package.json')
+const config = require('../../config/config')
+const dir = path.join(__dirname, '../', 'views')
 
 // http://paularmstrong.github.io/node-templates/benchmarks.html
 // swig is faster overall
 
-// var filters = {
+// const filters = {
 //   formatVersion: function(version) {
 //     return '@v' + version
 //   }

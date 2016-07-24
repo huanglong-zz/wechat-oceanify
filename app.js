@@ -1,14 +1,14 @@
 'use strict'
 
-var koa = require('koa')
-var path = require('path')
-var serve = require('koa-static')
-var logger = require('koa-logger')
-var json = require('koa-json')
-var oceanify = require('oceanify')
-var config = require('./config/config')
+const koa = require('koa')
+const path = require('path')
+const serve = require('koa-static')
+const logger = require('koa-logger')
+const json = require('koa-json')
+const oceanify = require('oceanify')
+const config = require('./config/config')
 
-var app = koa()
+const app = koa()
 
 //app.use(serve('views'))
 if (config.app.env === 'development') {
@@ -25,9 +25,9 @@ if (config.app.env === 'development') {
   }))
 }
 
-var Router = require('koa-router')
-var router = new Router()
-var application = require('./app/controllers/app')
+const Router = require('koa-router')
+const router = new Router()
+const application = require('./app/controllers/app')
 
 router.get('/', application.homePage)
 
@@ -43,7 +43,7 @@ app.use(json({
 module.exports = app
 
 if (!module.parent) {
-  var PORT = process.env.PORT || 8000
+  const PORT = process.env.PORT || 8000
 
   app.listen(PORT, function() {
     console.log('Server started at %s', PORT)

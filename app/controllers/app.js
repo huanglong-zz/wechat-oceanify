@@ -1,6 +1,6 @@
 'use strict'
 
-var render = require('../lib/render')
+const render = require('../lib/render')
 
 
 exports.homePage = function *(next) {

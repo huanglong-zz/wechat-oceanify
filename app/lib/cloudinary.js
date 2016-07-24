@@ -1,7 +1,7 @@
 'use strict'
 
-var cloudinary = require('cloudinary')
-var Promise = require('bluebird')
+const cloudinary = require('cloudinary')
+const Promise = require('bluebird')
 
 exports.uploadAsync = function(image, folder) {
   return new Promise(function(resolve, reject) {
