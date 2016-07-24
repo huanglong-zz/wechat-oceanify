@@ -6,22 +6,25 @@ var serve = require('koa-static')
 var logger = require('koa-logger')
 var json = require('koa-json')
 var oceanify = require('oceanify')
+var config = require('./config/config')
 
 var app = koa()
 
 
 //app.use(serve('views'))
-app.use(serve('public'))
-app.use(oceanify({
-  root: __dirname,
-  dest: path.join(__dirname, 'public'),
-  serveSource: true,
-  importConfig: {
-    map: {
-      'templates/(\\d+)': '/templates/$1.js'
+if (config.env === 'development') {
+  app.use(serve('public'))
+  app.use(oceanify({
+    root: __dirname,
+    dest: path.join(__dirname, 'public'),
+    serveSource: true,
+    importConfig: {
+      map: {
+        'templates/(\\d+)': '/templates/$1.js'
+      }
     }
-  }
-}))
+  }))
+}
 
 var Router = require('koa-router')
 var router = new Router()
