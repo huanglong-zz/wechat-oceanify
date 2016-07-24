@@ -2,6 +2,12 @@
 
 {% block content %}
 {% include "./includes/banner.html" with page only %}
+<style>
+  .flatpickr-calendar {display:none;}
+</style>
+<input id="flatpickr-tryme" class="flatpickr" data-inline placeholder="Pick a date below">
+<input class="input-phone" type="text"/>
+
 <div class="article">
 {% set states = [{n: 'ca', t: 'California | 加州'}, {n: 'ny', t: 'New York | 纽约州', cover: 'category-2'}, {n: 'fl', t: 'Florida | 佛罗里达州'}, {n: 'pa', t: 'Pennsylvania | 宾夕法尼亚州'}, {n: 'il', t: 'Illinois | 伊利诺伊州'}, {n: 'ma', t: 'Massachusetts | 马萨诸塞州'}, {n: 'nj', t: 'New Jersey | 新泽西州'}, {n: 'wa', t: 'Washington | 华盛顿州'}] %}
 {% for state in states %}

@@ -10,9 +10,8 @@ var config = require('./config/config')
 
 var app = koa()
 
-
 //app.use(serve('views'))
-if (config.env === 'development') {
+if (config.app.env === 'development') {
   app.use(serve('public'))
   app.use(oceanify({
     root: __dirname,

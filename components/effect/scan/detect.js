@@ -1,15 +1,24 @@
 'use strict'
 
-function Detect(id) {
-  this.id = id
-  this.desc = 'detect'
-}
+var flatpickr = require('flatpickr')
+var Cleave = require('cleave.js')
 
+// flatpickr works fine, while addon modules failed
+require('clevave.js/src/addons/phone-type-formatter.cn.js')
 
 function detect() {
-  return new Detect('#detect')
+  flatpickr('#flatpickr-tryme')
     .end()
+
+  new Cleave('.input-phone', {
+    phone: true,
+    phoneRegionCode: 'CN'
+  })
 }
+
+
+
+
 
 
 module.exports = detect

@@ -1,6 +1,7 @@
 'use strict'
 
-var $ = require('yen')
+require('zepto')
 
-console.log('preload')
-console.log($)
+window.Zepto && window.Zepto(function() {
+  console.log('zepto preload')
+})
