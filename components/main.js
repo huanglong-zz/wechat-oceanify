@@ -3,13 +3,14 @@
 /*
  * Test cases
  */
-var manga = require('effect/nga')
-var detect = require('effect/scan/detect')
+var manga = require('pages/nga')
+var homeInit = require('pages/homepage/main')
 var Chart = require('chart.js')
 var $ = window.Zepto
 
+homeInit()
+
 console.log(manga)
-console.log(detect)
 console.log(Chart)
 
 console.log($('.category'))

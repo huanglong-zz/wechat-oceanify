@@ -6,10 +6,9 @@ var Cleave = require('cleave.js')
 // flatpickr works fine, while addon modules failed
 require('clevave.js/src/addons/phone-type-formatter.cn.js')
 
-function detect() {
+function init() {
   flatpickr('#flatpickr-tryme')
-    .end()
-
+  
   new Cleave('.input-phone', {
     phone: true,
     phoneRegionCode: 'CN'
@@ -17,8 +16,4 @@ function detect() {
 }
 
 
-
-
-
-
-module.exports = detect
+module.exports = init
