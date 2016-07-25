@@ -19,7 +19,7 @@
     "koa-static": "^2.0.0",
     "lodash": "^4.13.1",
     "moment": "^2.14.1",
-    "oceanify": "^4.3.2",
+    "oceanify": "git@github.com:erzu/oceanify.git#early-import-and-map",
     "swig": "^1.4.2",
     "yen": "^1.4.0",
     "zepto": "^1.2.0"

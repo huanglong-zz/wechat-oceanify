@@ -17,7 +17,8 @@ if (config.app.env === 'development') {
     root: __dirname,
     dest: path.join(__dirname, 'public'),
     serveSource: true,
-    importConfig: {
+    loaderConfig: {
+      preload: 'zepto',
       map: {
         'templates/(\\d+)': '/templates/$1.js'
       }

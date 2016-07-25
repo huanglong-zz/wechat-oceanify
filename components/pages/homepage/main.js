@@ -8,7 +8,7 @@ require('cleave.js/src/addons/phone-type-formatter.cn')
 
 function init() {
   flatpickr('#flatpickr-tryme')
-  
+
   new Cleave('.input-phone', {
     phone: true,
     phoneRegionCode: 'CN'
